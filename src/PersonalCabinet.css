@@ -1,0 +1,107 @@
+.personal-cabinet {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.photo-container {
+  margin-bottom: 20px;
+}
+
+.photo-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #B5DDAE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-icon {
+  width: 100%;
+  height: 100%;
+  color: #FAF8F8;
+}
+
+.user-data {
+  margin-bottom: 20px;
+}
+
+.user-data p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+/* Стили для отображения данных */
+.display-data p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+/* Стили для формы редактирования */
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Отступы между полями */
+} 
+
+button {
+  background: #B5DDAE;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: "Abhaya Libre", sans-serif;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #9ecf97;
+}
+
+.upload-button {
+  background: #B5DDAE;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: "Abhaya Libre", sans-serif;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: inline-block;
+}
+
+.upload-button:hover {
+  background: #9ecf97;
+}
+
+.photo-upload {
+  display: none;
+}
+
+/* Стиль для полей в режиме редактирования */
+.editing-input {
+  border: 1px solid #B5DDAE !important; /* Зеленая граница */
+  border-radius: 4px;
+  padding: 8px;
+  outline: none; /* Убираем стандартный outline */
+  background: #F5F5F5;
+}
+
+

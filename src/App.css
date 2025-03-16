@@ -1,0 +1,138 @@
+/* src/App.css */
+
+footer {
+  background-color: #F2ECE9;
+  text-align: center;
+  height: 80px;
+  width: 100%;
+  bottom: 0;
+  margin-top: auto; /* This is often useful for sticky footers */
+}
+
+footer p {
+  font-family: "Abhaya Libre", sans-serif; /* Specify a fallback */
+  font-size: 34px;
+  font-style: normal;
+}
+
+header {
+  background-color: #F2ECE9;
+}
+
+body {
+  background-color: #FAF8F8 !important; /* Consider removing !important, try to override in React first */
+  font-size: 40px !important; /* Try to avoid !important, manage in React component */
+}
+
+.link-button {
+  background: #B5DDAE;
+  border-radius: 30px;
+  border-color: #B5DDAE;
+  font-size: 20px;
+  font-family: "Abhaya Libre", sans-serif;
+  font-style: normal;
+  margin: 5px;
+  padding: 10px 20px; /* Добавьте отступы для лучшего внешнего вида */
+  color: black; /* Цвет текста */
+  text-decoration: none !important; /* Убираем подчеркивание */
+  display: inline-block; /* Чтобы ссылка вела себя как кнопка */
+  text-align: center;
+}
+
+/* Переопределяем стили для hover внутри .link-button */
+.link-button:hover {
+  text-decoration: none !important; /* Убираем подчеркивание при наведении */
+  background: #9ecf97; /* Изменяем цвет фона при наведении */
+}
+
+/* Глобальные стили для ссылок */
+a {
+  color: black !important; /* Avoid !important */
+  text-decoration-line: none !important; /* Avoid !important */
+}
+
+a:hover {
+  text-decoration-line: underline !important; /* Avoid !important */
+  text-decoration-thickness: 9px !important; /* Avoid !important */
+  text-decoration-color: white !important; /* Avoid !important */
+}
+
+.card {
+  margin-bottom: 10px !important; /* Avoid !important */
+  width: 300px;
+  background-color: #D9D9D9 !important; /* Avoid !important */
+  margin: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-family: "Abhaya Libre", sans-serif; /* Specify a fallback */
+  font-size: 128px !important; /* Avoid !important */
+}
+
+@media (max-width: 1000px) {
+  h1 {
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 85px !important; /* Avoid !important */
+      margin-top: -20px !important; /* Avoid !important */
+  }
+}
+
+h2 {
+  font-family: "Abhaya Libre Medium", sans-serif !important; /* Specify a fallback and avoid !important */
+  font-size: 40px !important; /* Avoid !important */
+  font-style: normal !important; /* Avoid !important */
+  margin-top: -20px !important; /* Avoid !important */
+}
+
+h3 {
+  font-family: "Abhaya Libre", sans-serif !important; /* Specify a fallback and avoid !important */
+  font-size: 30px !important; /* Avoid !important */
+  font-style: normal !important; /* Avoid !important */
+  line-height: 70%;
+}
+
+h4 {
+  font-family: "Abhaya Libre SemiBold", sans-serif !important; /* Specify a fallback and avoid !important */
+  font-size: 20px !important; /* Avoid !important */
+  font-style: normal !important; /* Avoid !important */
+  margin-top: 10px !important; /* Avoid !important */
+}
+
+.main-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.main-content img {
+  max-width: 300px;
+  height: auto;
+  margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .main-content img {
+      margin-right: 0;
+      margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .logo-container {
+      display: flex;
+      flex-direction: column;
+  }
+}
