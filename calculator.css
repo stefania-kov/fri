@@ -1,0 +1,291 @@
+
+.calculator-container {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.calculator-wrapper, .activity-tracker-wrapper {
+  width: 48%;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+
+.no-results {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.add-product-link {
+  cursor: pointer;
+  text-decoration: underline;
+  color: blue;
+}
+
+.add-product-form {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.search-results {
+  border: 1px solid #ccc;
+  padding: 5px;
+  list-style: none;
+  margin: 0;
+}
+
+.search-result {
+  padding: 5px;
+  cursor: pointer;
+  &:hover {
+    background-color: #f0f0f0;
+  }
+}
+
+.success-message {
+  color: green;
+  margin-top: 10px;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+  margin-top: 20px;
+}
+.activity-tracker {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.add-activity-form {
+  margin-bottom: 10px;
+}
+
+.add-activity-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.add-activity-form input {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.activity-tracker ul {
+  list-style: none;
+  padding: 0;
+}
+
+.activity-tracker li {
+  margin-bottom: 5px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+@media (max-width: 768px) {
+  .calculator-wrapper, .activity-tracker-wrapper {
+    width: 95%;
+  }
+}
+.search-results {
+  list-style: none;
+  padding: 0;
+}
+
+.search-result {
+  cursor: pointer;
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+.search-result:hover {
+  background-color: #f0f0f0;
+}
+.radio-buttons {
+  display: flex; /* Располагаем радиокнопки в одну линию */
+}
+
+.radio-label {
+  margin-right: 10px; /* Добавляем отступ между радиокнопками */
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный оверлей */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  max-width: 400px; /* Ограничение ширины модального окна */
+}
+
+.add-product-form label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.add-product-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.add-product-form button {
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.add-activity-link {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.meal-type {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.meal-type label {
+  font-weight: bold;
+}
+
+.meal-type button {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  background: #f5f5f5;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.meal-type button.active {
+  background: #4CAF50;
+  color: white;
+  border-color: #4CAF50;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin: 30px 0;
+}
+
+.column {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.save-area {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.save-btn {
+  padding: 12px 24px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.save-btn:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.save-btn:not(:disabled):hover {
+  background: #45a049;
+  transform: translateY(-2px);
+}
+
+.error {
+  color: #d32f2f;
+  background: #ffebee;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
