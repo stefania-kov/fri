@@ -1,4 +1,5 @@
-const { pool } = require('../server'); // Импортируем pool из server.js
+const { pool } = require('../server');
+
 const validateNumber = (value, fieldName) => {
   if (isNaN(value)) {
     throw new Error(`Поле ${fieldName} должно быть числом`);
@@ -14,17 +15,28 @@ exports.getAllProducts = async () => {
 };
 
 exports.createProduct = async (productData) => {
-  const { name, calories, proteins, fats, carbs } = productData;
+  const { 
+    name, 
+    caloriesper100g: calories,
+    proteins, 
+    fats, 
+    carbohydrates: carbs
+  } = productData;
   
-  if (!name || !calories || !proteins || !fats || !carbs) {
-    throw new Error('Все поля обязательны для заполнения');
-  }
+  // Проверка наличия всех обязательных полей
+  if (!name) throw new Error('Не указано название продукта (name)');
+  if (!calories) throw new Error('Не указаны калории (calories)');
+  if (!proteins) throw new Error('Не указаны белки (proteins)');
+  if (!fats) throw new Error('Не указаны жиры (fats)');
+  if (!carbs) throw new Error('Не указаны углеводы (carbs)');
   
+  // Валидация числовых полей
   validateNumber(calories, 'calories');
   validateNumber(proteins, 'proteins');
   validateNumber(fats, 'fats');
   validateNumber(carbs, 'carbs');
 
+  // Вставка в базу данных
   const { rows } = await pool.query(
     `INSERT INTO products 
      (name, caloriesper100g, proteins, fats, carbohydrates) 
